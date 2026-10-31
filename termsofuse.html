@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 
     <style>
         :root {
@@ -240,7 +240,7 @@
         .toc-list a.active {
             color: var(--primary-yellow);
             background-color: rgba(255, 230, 0, 0.06);
-           /*  border-left-color: var(--primary-yellow); */
+            /*  border-left-color: var(--primary-yellow); */
         }
 
         /* Legal content */
@@ -340,7 +340,7 @@
             margin: 0 0 52px 0;
         }
 
-     
+
         /* --- Modern Footer (same as main site) --- */
         footer {
             background-color: #050505;
@@ -500,6 +500,8 @@
             transform: translateY(0);
         }
 
+
+
         /* Responsive */
         @media (max-width: 991px) {
             .legal-hero {
@@ -517,6 +519,15 @@
 
             .legal-content {
                 padding-left: 0;
+            }
+
+            #navbarNav {
+                background-color: #151515;
+                /* Matches your card background */
+                border: 1px solid var(--border-color);
+                border-radius: 15px;
+                padding: 20px;
+                margin-top: 15px;
             }
         }
 
@@ -559,7 +570,7 @@
             background-color: rgb(10 10 10) !important;
         }
 
-          /* --- Back To Top Button --- */
+        /* --- Back To Top Button --- */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -602,7 +613,7 @@
 
 <body>
 
-      <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -613,18 +624,20 @@
                 <i class="bi bi-list text-light fs-1"></i>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="./index.html#how-it-works">How it Works</a></li>
                     <li class="nav-item"><a class="nav-link" href="./index.html#benefits">Benefits</a></li>
                     <li class="nav-item"><a class="nav-link" href="./index.html#faq">FAQs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./index.html#contact">Get in Touch</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="./index.html#contact">Get in Touch</a></li>
 
                     <!-- Added Sign In and Sign Up buttons in Navbar -->
-                      <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a class="btn-nav-outline d-block text-center" href="https://paiio-app.roja.one/" target="_blank">Sign In</a>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn-nav-outline d-block text-center" href="https://paiio-app.roja.one/"
+                            target="_blank">Sign In</a>
                     </li>
                     <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                        <a class="btn btn-custom w-100" href="https://paiio-app.roja.one/#/register" target="_blank">Sign Up</a>
+                        <a class="btn btn-custom w-100" href="https://paiio-app.roja.one/#/register"
+                            target="_blank">Sign Up</a>
                     </li>
                 </ul>
             </div>
@@ -688,7 +701,8 @@
                         <section id="acceptance" class="legal-section">
                             <h2><span class="legal-section-number">1</span>Acceptance of Terms</h2>
                             <p>
-                                By downloading, accessing, or using the Paiio mobile application, website, or any related
+                                By downloading, accessing, or using the Paiio mobile application, website, or any
+                                related
                                 services (collectively, the "Services"), you agree to be bound by these Terms of Use
                                 ("Terms"). If you do not agree to these Terms, you must not access or use the Services.
                             </p>
@@ -727,11 +741,15 @@
                                 Paiio is a financial wellness application that provides the following features:
                             </p>
                             <ul>
-                                <li><strong>Earned Wage Access (EWA):</strong> Access a portion of wages you have already earned before payday;</li>
-                                <li><strong>Personalized Offers:</strong> Receive curated financial offers and rewards from our partners;</li>
-                                <li><strong>Budgeting Tools:</strong> Create and manage budgets to track your spending;</li>
+                                <li><strong>Earned Wage Access (EWA):</strong> Access a portion of wages you have
+                                    already earned before payday;</li>
+                                <li><strong>Personalized Offers:</strong> Receive curated financial offers and rewards
+                                    from our partners;</li>
+                                <li><strong>Budgeting Tools:</strong> Create and manage budgets to track your spending;
+                                </li>
                                 <li><strong>Savings Goals:</strong> Set financial goals and monitor your progress;</li>
-                                <li><strong>Financial Insights:</strong> View personalized analytics and insights based on your activity.</li>
+                                <li><strong>Financial Insights:</strong> View personalized analytics and insights based
+                                    on your activity.</li>
                             </ul>
                             <div class="legal-callout">
                                 <p>
@@ -798,7 +816,8 @@
                             <ul>
                                 <li>Offer eligibility and terms are determined by the respective partner;</li>
                                 <li>Paiio is not responsible for the products or services offered by third parties;</li>
-                                <li>You are responsible for reviewing any third-party terms before accepting an offer;</li>
+                                <li>You are responsible for reviewing any third-party terms before accepting an offer;
+                                </li>
                                 <li>Paiio may receive compensation from partners for certain offers.</li>
                             </ul>
                         </section>
@@ -981,8 +1000,10 @@
                             <div class="legal-callout">
                                 <p>
                                     <strong>Paiio Inc.</strong><br>
-                                    Email: <a href="mailto:legal@paiio.com" style="color: var(--primary-yellow); text-decoration: none;">legal@paiio.com</a><br>
-                                    Support: <a href="mailto:support@paiio.com" style="color: var(--primary-yellow); text-decoration: none;">support@paiio.com</a><br>
+                                    Email: <a href="mailto:legal@paiio.com"
+                                        style="color: var(--primary-yellow); text-decoration: none;">legal@paiio.com</a><br>
+                                    Support: <a href="mailto:support@paiio.com"
+                                        style="color: var(--primary-yellow); text-decoration: none;">support@paiio.com</a><br>
                                     Address: 123 Finance Street, New York, NY 10001
                                 </p>
                             </div>
@@ -1049,135 +1070,135 @@
                 </div>
             </div>
 
-<!-- Footer Bottom -->
-<div class="footer-bottom">
-    <div class="row align-items-center gy-4">
-        <!-- Left: Copyright -->
-        <div class="col-lg-6 text-center text-lg-start">
-            <p class="mb-0">&copy; 2026 Paiio Inc. All rights reserved.</p>
-        </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center gy-4">
+                    <!-- Left: Copyright -->
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <p class="mb-0">&copy; 2026 Paiio Inc. All rights reserved.</p>
+                    </div>
 
-        <!-- Center: Trust / Feature badges -->
-        <div class="col-lg-6 text-end">
-            <div class="footer-trust-strip">
-                <span class="trust-item"> Bank-Level Security</span>
-                <span class="trust-divider"></span>
-                <span class="trust-item"> Instant Access</span>
-                <span class="trust-divider"></span>
-                <span class="trust-item"> No Credit Impact</span>
+                    <!-- Center: Trust / Feature badges -->
+                    <div class="col-lg-6 text-end">
+                        <div class="footer-trust-strip">
+                            <span class="trust-item"> Bank-Level Security</span>
+                            <span class="trust-divider"></span>
+                            <span class="trust-item"> Instant Access</span>
+                            <span class="trust-divider"></span>
+                            <span class="trust-item"> No Credit Impact</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
 
-    <!-- Back To Top Button -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
-        <img src="assets/Vector.png" class="back-top-img">
-    </a>
+            <!-- Back To Top Button -->
+            <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+                <img src="assets/Vector.png" class="back-top-img">
+            </a>
 
 
-<!-- Bootstrap 5 JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Bootstrap 5 JS Bundle -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // --- Navbar shrink / shadow on scroll ---
-        const navbar = document.querySelector('.navbar');
-        const backToTop = document.getElementById('backToTop');
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // --- Navbar shrink / shadow on scroll ---
+                    const navbar = document.querySelector('.navbar');
+                    const backToTop = document.getElementById('backToTop');
 
-        function handleScroll() {
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
-                navbar.style.padding = '5px 0';
-            } else {
-                navbar.style.boxShadow = 'none';
-                navbar.style.padding = '10px 0';
-            }
+                    function handleScroll() {
+                        if (window.scrollY > 50) {
+                            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+                            navbar.style.padding = '5px 0';
+                        } else {
+                            navbar.style.boxShadow = 'none';
+                            navbar.style.padding = '10px 0';
+                        }
 
-            if (window.scrollY > 400) {
-                backToTop.classList.add('active');
-            } else {
-                backToTop.classList.remove('active');
-            }
-        }
+                        if (window.scrollY > 400) {
+                            backToTop.classList.add('active');
+                        } else {
+                            backToTop.classList.remove('active');
+                        }
+                    }
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        handleScroll();
+                    window.addEventListener('scroll', handleScroll, { passive: true });
+                    handleScroll();
 
-        // --- Back to top ---
-        backToTop.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+                    // --- Back to top ---
+                    backToTop.addEventListener('click', function () {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
 
-        // --- Reveal on scroll ---
-        const revealElements = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+                    // --- Reveal on scroll ---
+                    const revealElements = document.querySelectorAll('.reveal');
+                    const revealObserver = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('active');
+                                revealObserver.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        revealElements.forEach(function (el) {
-            revealObserver.observe(el);
-        });
+                    revealElements.forEach(function (el) {
+                        revealObserver.observe(el);
+                    });
 
-        // --- TOC active link highlighting on scroll ---
-        const tocLinks = document.querySelectorAll('.toc-link');
-        const sections = document.querySelectorAll('.legal-section');
+                    // --- TOC active link highlighting on scroll ---
+                    const tocLinks = document.querySelectorAll('.toc-link');
+                    const sections = document.querySelectorAll('.legal-section');
 
-        function updateActiveToc() {
-            let currentId = '';
-            const scrollPos = window.scrollY + 130;
+                    function updateActiveToc() {
+                        let currentId = '';
+                        const scrollPos = window.scrollY + 130;
 
-            sections.forEach(function (section) {
-                if (section.offsetTop <= scrollPos) {
-                    currentId = section.getAttribute('id');
-                }
-            });
+                        sections.forEach(function (section) {
+                            if (section.offsetTop <= scrollPos) {
+                                currentId = section.getAttribute('id');
+                            }
+                        });
 
-            tocLinks.forEach(function (link) {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + currentId) {
-                    link.classList.add('active');
-                }
-            });
-        }
+                        tocLinks.forEach(function (link) {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + currentId) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
 
-        window.addEventListener('scroll', updateActiveToc, { passive: true });
-        updateActiveToc();
+                    window.addEventListener('scroll', updateActiveToc, { passive: true });
+                    updateActiveToc();
 
-        // --- Smooth scroll for TOC links ---
-        tocLinks.forEach(function (link) {
-            link.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-                if (target) {
-                    e.preventDefault();
-                    const offset = 100;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                    history.pushState(null, '', targetId);
-                }
-            });
-        });
+                    // --- Smooth scroll for TOC links ---
+                    tocLinks.forEach(function (link) {
+                        link.addEventListener('click', function (e) {
+                            const targetId = this.getAttribute('href');
+                            const target = document.querySelector(targetId);
+                            if (target) {
+                                e.preventDefault();
+                                const offset = 100;
+                                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                                history.pushState(null, '', targetId);
+                            }
+                        });
+                    });
 
-        // --- Close mobile navbar on link click ---
-        const navCollapse = document.getElementById('navbarNav');
-        if (navCollapse) {
-            const bsCollapse = new bootstrap.Collapse(navCollapse, { toggle: false });
-            document.querySelectorAll('#navbarNav .nav-link, #navbarNav .btn').forEach(function (link) {
-                link.addEventListener('click', function () {
-                    if (window.innerWidth < 992 && navCollapse.classList.contains('show')) {
-                        bsCollapse.hide();
+                    // --- Close mobile navbar on link click ---
+                    const navCollapse = document.getElementById('navbarNav');
+                    if (navCollapse) {
+                        const bsCollapse = new bootstrap.Collapse(navCollapse, { toggle: false });
+                        document.querySelectorAll('#navbarNav .nav-link, #navbarNav .btn').forEach(function (link) {
+                            link.addEventListener('click', function () {
+                                if (window.innerWidth < 992 && navCollapse.classList.contains('show')) {
+                                    bsCollapse.hide();
+                                }
+                            });
+                        });
                     }
                 });
-            });
-        }
-    });
-</script>
+            </script>
 
 </body>
 
