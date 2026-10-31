@@ -1271,6 +1271,227 @@ textarea.custom-input {
 }
 
 
+/* =========================================
+   CREATIVE ABOUT SECTION (Center-Out Layout)
+   ========================================= */
+
+.about-creative-section {
+    position: relative;
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+/* Massive ambient background glow */
+.about-bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 230, 0, 0.04) 0%, rgba(10, 10, 10, 0) 65%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+/* --- Side Cards (Left & Right) --- */
+.about-side-card {
+    background: linear-gradient(145deg, rgba(21, 21, 21, 0.8) 0%, rgba(15, 15, 15, 0.6) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px 24px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.about-side-card:hover {
+    border-color: rgba(255, 230, 0, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about-icon-wrap {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 230, 0, 0.08);
+    border: 1px solid rgba(255, 230, 0, 0.2);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.about-side-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-light);
+}
+
+.about-side-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-link {
+    color: var(--primary-yellow);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: gap 0.3s ease;
+}
+
+.about-link:hover {
+    color: #fff;
+    gap: 8px; /* Creates a sliding arrow effect */
+}
+
+/* Checklist */
+.about-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-checklist li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-checklist li i {
+    color: var(--primary-yellow);
+    font-size: 1rem;
+}
+
+/* --- Center Image & Floating Elements --- */
+.about-center-image-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    z-index: 2;
+}
+
+/* Glow specifically behind the phones */
+.phone-ambient-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 100%;
+    background: radial-gradient(ellipse, rgba(255, 230, 0, 0.1) 0%, transparent 60%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.about-main-img {
+    width: 100%;
+    max-width: 480px; /* Adjust based on your image size */
+    height: auto;
+    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.7));
+    animation: floatPhones 6s ease-in-out infinite;
+}
+
+@keyframes floatPhones {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* Floating Badges on Image */
+.floating-badge {
+    position: absolute;
+    background: rgba(21, 21, 21, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 230, 0, 0.3);
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    z-index: 3;
+}
+
+.badge-top {
+    top: 15%;
+    left: -15px;
+    animation: floatBadge1 5s ease-in-out infinite;
+}
+
+.badge-bottom {
+    bottom: 20%;
+    right: -15px;
+    animation: floatBadge2 5s ease-in-out infinite reverse;
+}
+
+@keyframes floatBadge1 {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes floatBadge2 {
+    0%, 100% { transform: translateY(0) rotate(2deg); }
+    50% { transform: translateY(-10px) rotate(-2deg); }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+    .about-center-image-wrapper {
+        margin: 40px 0;
+    }
+    
+    .about-main-img {
+        max-width: 380px;
+    }
+
+    .about-side-col {
+        text-align: center !important;
+    }
+
+    .about-icon-wrap {
+        margin: 0 auto 15px auto !important;
+    }
+
+    .about-checklist {
+        display: inline-block;
+        text-align: left;
+    }
+    
+    .badge-top { left: 0; }
+    .badge-bottom { right: 0; }
+}
+
+@media (max-width: 576px) {
+    .about-main-img {
+        max-width: 100%;
+    }
+    .floating-badge {
+        font-size: 0.75rem;
+        padding: 8px 12px;
+    }
+    .badge-top { top: 5%; }
+    .badge-bottom { bottom: 10%; }
+}
+
+
     </style>
 </head>
 
@@ -1325,6 +1546,77 @@ textarea.custom-input {
             </div>
         </div>
     </header>
+
+
+    <!-- About Section -->
+<section id="about" class="section-padding about-creative-section">
+    <div class="container">
+
+                  <div class="text-center reveal">
+                <h2 class="section-title">About <span class="text-yellow">Paiio</span> </h2>
+                <p class="section-subtitle">   We're on a mission to modernize how you get paid. Paiio bridges the gap between work done and payday, giving you the financial flexibility you deserve without the stress of loans.</p>
+            </div>
+
+        <!-- Background Glow -->
+        <div class="about-bg-glow"></div>
+
+        <div class="row align-items-center justify-content-between g-4 position-relative z-2">
+            
+            <!-- LEFT COLUMN: Brand & Mission -->
+            <div class="col-lg-3 col-md-5 text-center text-md-end reveal about-side-col">
+                <div class="about-side-card">
+                    <div class="about-icon-wrap ms-md-auto me-md-0 mx-auto mb-3">
+                        <i class="bi bi-rocket-takeoff text-yellow"></i>
+                    </div>
+                    <h3 class="about-side-title">Our <span class="text-yellow">Mission</span></h3>
+                    <p class="about-side-text">
+                        To break the stressful bi-weekly pay cycle. We believe you should have access to the money you've already worked for, without falling into predatory debt traps.
+                    </p>
+                    <a href="#how-it-works" class="about-link mt-3 d-inline-flex align-items-center">
+                        See how it works <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CENTER COLUMN: The Image (The Focal Point) -->
+            <div class="col-lg-6 col-md-2 text-center reveal" style="transition-delay: 0.1s;">
+                <div class="about-center-image-wrapper">
+                    <!-- Ambient glow behind phones -->
+                    <div class="phone-ambient-glow"></div>
+                    <img src="assets/about-phones.png" alt="Paiio App Interface" class="about-main-img">
+                    
+                    <!-- Floating UI Elements for extra creativity -->
+                    <div class="floating-badge badge-top">
+                        <i class="bi bi-check-circle-fill text-yellow"></i> Get Advance upto $500
+                    </div>
+                    <div class="floating-badge badge-bottom">
+                        <i class="bi bi-lightning-charge-fill text-yellow"></i> Instant Transfers
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Trust & Features -->
+            <div class="col-lg-3 col-md-5 text-center text-md-start reveal about-side-col" style="transition-delay: 0.2s;">
+                <div class="about-side-card">
+                    <div class="about-icon-wrap ms-md-0 me-md-auto mx-auto mb-3">
+                        <i class="bi bi-shield-check text-yellow"></i>
+                    </div>
+                    <h3 class="about-side-title">Built on <span class="text-yellow">Trust</span></h3>
+                    <p class="about-side-text">
+                        Paiio is a financial technology company. We use bank-level encryption to securely link your accounts and verify your earned wages.
+                    </p>
+                    <ul class="about-checklist mt-3">
+                        <li><i class="bi bi-check2"></i> 256-bit Encryption</li>
+                        <li><i class="bi bi-check2"></i> Zero Hidden Fees</li>
+                        <li><i class="bi bi-check2"></i> Transparent Terms</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 <!-- What is EWA Section (Creative Redesign) -->
 <section class="section-padding ewa-creative-section">
@@ -1394,7 +1686,7 @@ textarea.custom-input {
     <section id="how-it-works" class="section-padding bg-dark">
         <div class="container">
             <div class="text-center reveal">
-                <h2 class="section-title">How It Works</h2>
+                <h2 class="section-title">How It <span class="text-yellow">Works</span> </h2>
                 <p class="section-subtitle">Get your hard-earned money in three simple, seamless steps.</p>
             </div>
 
