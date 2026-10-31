@@ -1,0 +1,43 @@
+<!-- admin.html -->
+<script type="module">
+import { initializeApp } from "...firebase-app.js";
+import { getFirestore, doc, getDoc, setDoc } from "...firebase-firestore.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "...firebase-auth.js";
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+
+// Login
+async function login(email, password) {
+  await signInWithEmailAndPassword(auth, email, password);
+}
+
+// Save content
+async function saveHeroContent(data) {
+  await setDoc(doc(db, "content", "hero"), data, { merge: true });
+}
+
+// Render form
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // Load current content
+    getDoc(doc(db, "content", "hero")).then(snap => {
+      if (snap.exists()) {
+        const d = snap.data();
+        document.getElementById("heroTitle").value = d.title || "";
+        document.getElementById("heroDesc").value = d.desc || "";
+      }
+    });
+    // Bind save button
+    document.getElementById("saveHero").onclick = () => {
+      saveHeroContent({
+        title: document.getElementById("heroTitle").value,
+        desc: document.getElementById("heroDesc").value,
+        highlight: document.getElementById("heroHighlight").value
+      });
+      alert("Saved! Live site will update instantly.");
+    };
+  }
+});
+</script>
