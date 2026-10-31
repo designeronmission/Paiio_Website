@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Paiio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-yellow: #FFE600;
+            --bg-dark: #0a0a0a;
+            --bg-card: #151515;
+            --text-light: #f8f9fa;
+            --text-muted: #a0a0a0;
+            --border-color: #2a2a2a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        .text-yellow {
+            color: var(--primary-yellow) !important;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand img {
+            max-height: 90px;
+        }
+
+        .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-yellow) !important;
+        }
+
+        .btn-custom {
+            background-color: var(--primary-yellow);
+            color: #000;
+            font-weight: 700;
+            border-radius: 50px;
+            padding: 10px 24px;
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-custom:hover {
+            background-color: #e6cf00;
+            color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 230, 0, 0.2);
+        }
+
+        .btn-nav-outline {
+            color: var(--text-light);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-nav-outline:hover {
+            border-color: var(--primary-yellow);
+            color: var(--primary-yellow);
+        }
+
+        /* --- Legal Hero --- */
+        .legal-hero {
+            padding: 180px 0 60px 0;
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .legal-hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -5%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 230, 0, 0.07) 0%, rgba(10, 10, 10, 0) 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .legal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(255, 230, 0, 0.08);
+            border: 1px solid rgba(255, 230, 0, 0.25);
+            color: var(--primary-yellow);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 7px 16px;
+            border-radius: 50px;
+            margin-bottom: 22px;
+        }
+
+        .legal-hero h1 {
+            font-size: 3.6rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .legal-hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 620px;
+            margin-top: 18px;
+        }
+
+        .legal-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 26px;
+            margin-top: 28px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .legal-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legal-meta i {
+            color: var(--primary-yellow);
+        }
+
+        /* --- Layout: Sticky TOC + Content --- */
+        .legal-body {
+            padding: 70px 0 100px 0;
+        }
+
+        .toc-card {
+            position: sticky;
+            top: 110px;
+            background: linear-gradient(145deg, #161616 0%, #0f0f0f 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 28px 24px;
+            overflow: hidden;
+        }
+
+        .toc-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--primary-yellow);
+            border-radius: 18px 0 0 18px;
+        }
+
+        .toc-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li {
+            margin-bottom: 4px;
+        }
+
+        .toc-list a {
+            display: block;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            line-height: 1.4;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+            border-left: 2px solid transparent;
+        }
+
+        .toc-list a:hover,
+        .toc-list a.active {
+            color: var(--primary-yellow);
+            background-color: rgba(255, 230, 0, 0.06);
+        }
+
+        /* Legal content */
+        .legal-content {
+            padding-left: 20px;
+        }
+
+        .legal-section {
+            margin-bottom: 52px;
+            scroll-margin-top: 110px;
+        }
+
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            background-color: rgba(255, 230, 0, 0.1);
+            border: 1px solid rgba(255, 230, 0, 0.25);
+            color: var(--primary-yellow);
+            font-weight: 700;
+            font-size: 0.85rem;
+            border-radius: 9px;
+            margin-right: 14px;
+            flex-shrink: 0;
+        }
+
+        .legal-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .legal-section p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .legal-section ul {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            line-height: 1.8;
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 16px;
+        }
+
+        .legal-section ul li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 10px;
+        }
+
+        .legal-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--primary-yellow);
+        }
+
+        .legal-callout {
+            background-color: var(--bg-card);
+            border-left: 3px solid var(--primary-yellow);
+            border-radius: 0 14px 14px 0;
+            padding: 22px 26px;
+            margin: 24px 0;
+        }
+
+        .legal-callout p {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .legal-callout strong {
+            color: var(--primary-yellow);
+        }
+
+        .legal-divider {
+            height: 1px;
+            background: linear-gradient(90deg, var(--border-color), transparent);
+            margin: 0 0 52px 0;
+        }
+
+        /* --- Modern Footer (same as main site) --- */
+        footer {
+            background-color: #050505;
+            padding: 80px 0 30px 0;
+            color: var(--text-muted);
+        }
+
+        .footer-brand img {
+            max-height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .footer-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 300px;
+            margin-bottom: 25px;
+        }
+
+        .footer-heading {
+            color: var(--text-light);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-yellow);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--bg-card);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-yellow);
+            color: #000;
+            border-color: var(--primary-yellow);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
+            margin-top: 60px;
+            font-size: 0.85rem;
+        }
+
+        .footer-trust-strip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            padding: 10px 22px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+        }
+
+        .trust-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .trust-item i {
+            color: var(--primary-yellow);
+            font-size: 0.95rem;
+        }
+
+        .trust-divider {
+            width: 1px;
+            height: 14px;
+            background-color: var(--border-color);
+        }
+
+        /* Back To Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-yellow);
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 20px rgba(255, 230, 0, 0.3);
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: none;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        .back-top-img {
+            width: 42px;
+        }
+
+        /* Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .legal-hero {
+                padding: 140px 0 50px 0;
+            }
+
+            .legal-hero h1 {
+                font-size: 2.6rem;
+            }
+
+            .toc-card {
+                position: static;
+                margin-bottom: 40px;
+            }
+
+            .legal-content {
+                padding-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .legal-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .legal-section h2 {
+                font-size: 1.25rem;
+            }
+
+            .footer-brand img {
+                max-height: 80px;
+            }
+
+            .footer-trust-strip {
+                gap: 10px;
+                padding: 8px 16px;
+            }
+
+            .trust-item {
+                font-size: 0.76rem;
+            }
+
+            .trust-divider {
+                display: none;
+            }
+        }
+
+        .text-muted {
+            color: #797979 !important;
+        }
+
+        .bg-dark {
+            background-color: rgb(10 10 10) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="assets/logo.png" alt="Paiio Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                style="border-color: var(--border-color);">
+                <i class="bi bi-list text-light fs-1"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="./index.html#how-it-works">How it Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#benefits">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#faq">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#contact">Get in Touch</a></li>
+
+                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn-nav-outline d-block text-center" href="https://paiio-app.roja.one/" target="_blank">Sign In</a>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn btn-custom w-100" href="https://paiio-app.roja.one/#/register" target="_blank">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Legal Hero -->
+    <header class="legal-hero">
+        <div class="container reveal">
+            <div class="legal-badge">
+                <i class="bi bi-shield-lock"></i> Privacy
+            </div>
+            <h1>Privacy <span class="text-yellow">Policy</span></h1>
+            <p>
+                This Privacy Policy explains how Paiio Inc. collects, uses, shares, and protects your personal
+                information when you use our app, website, and related services.
+            </p>
+            <div class="legal-meta">
+                <span><i class="bi bi-calendar3"></i> Effective Date: January 1, 2026</span>
+                <span><i class="bi bi-clock-history"></i> Last Updated: January 1, 2026</span>
+                <span><i class="bi bi-geo-alt"></i> Governing Law: State of New York</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Legal Body -->
+    <main class="legal-body">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Sticky Table of Contents -->
+                <div class="col-lg-4 col-xl-3">
+                    <div class="toc-card reveal">
+                        <div class="toc-title">On This Page</div>
+                        <ul class="toc-list">
+                            <li><a href="#overview" class="toc-link active">1. Overview</a></li>
+                            <li><a href="#information-we-collect" class="toc-link">2. Information We Collect</a></li>
+                            <li><a href="#how-we-use" class="toc-link">3. How We Use Your Information</a></li>
+                            <li><a href="#sharing" class="toc-link">4. Sharing Your Information</a></li>
+                            <li><a href="#bank-data" class="toc-link">5. Bank Data & Chirp</a></li>
+                            <li><a href="#cookies" class="toc-link">6. Cookies & Tracking</a></li>
+                            <li><a href="#security" class="toc-link">7. Data Security</a></li>
+                            <li><a href="#retention" class="toc-link">8. Data Retention</a></li>
+                            <li><a href="#your-rights" class="toc-link">9. Your Privacy Rights</a></li>
+                            <li><a href="#children" class="toc-link">10. Children's Privacy</a></li>
+                            <li><a href="#third-party" class="toc-link">11. Third-Party Links</a></li>
+                            <li><a href="#changes-privacy" class="toc-link">12. Changes to This Policy</a></li>
+                            <li><a href="#contact-privacy" class="toc-link">13. Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Legal Content -->
+                <div class="col-lg-8 col-xl-9">
+                    <div class="legal-content reveal">
+
+                        <!-- 1 -->
+                        <section id="overview" class="legal-section">
+                            <h2><span class="legal-section-number">1</span>Overview</h2>
+                            <p>
+                                Paiio Inc. ("Paiio," "we," "us," or "our") is committed to protecting your privacy.
+                                This Privacy Policy describes the types of information we collect, how we use and
+                                share it, and the choices and rights you have regarding your personal information.
+                            </p>
+                            <p>
+                                This Policy applies to the Paiio mobile application, website, and all related services
+                                (collectively, the "Services"). By using the Services, you consent to the collection
+                                and use of your information as described in this Policy.
+                            </p>
+                            <div class="legal-callout">
+                                <p>
+                                    <strong>Your Consent:</strong> By creating an account or using Paiio, you agree
+                                    to this Privacy Policy and our Terms of Use. If you do not agree, please do not
+                                    use the Services.
+                                </p>
+                            </div>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 2 -->
+                        <section id="information-we-collect" class="legal-section">
+                            <h2><span class="legal-section-number">2</span>Information We Collect</h2>
+                            <p>We collect several categories of information to provide and improve our Services:</p>
+                            <ul>
+                                <li><strong>Personal Identifiers:</strong> Name, email address, phone number, date of birth, and government-issued ID;</li>
+                                <li><strong>Account Information:</strong> Login credentials, account preferences, and security settings;</li>
+                                <li><strong>Financial Information:</strong> Bank account details, transaction history, income data, and payroll information;</li>
+                                <li><strong>Device Information:</strong> IP address, device type, operating system, browser type, and unique device identifiers;</li>
+                                <li><strong>Usage Information:</strong> Pages viewed, features used, time spent, and interactions within the app;</li>
+                                <li><strong>Location Information:</strong> Approximate location based on IP address (with your consent, precise location may be collected).</li>
+                            </ul>
+                            <p>
+                                We collect this information directly from you, automatically through your use of the
+                                Services, and from third-party partners such as banks, employers, and verification
+                                services.
+                            </p>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 3 -->
+                        <section id="how-we-use" class="legal-section">
+                            <h2><span class="legal-section-number">3</span>How We Use Your Information</h2>
+                            <p>We use the information we collect for the following purposes:</p>
+                            <ul>
+                                <li>To create and manage your Paiio account;</li>
+                                <li>To verify your identity and eligibility for our Services;</li>
+                                <li>To calculate available earned wages and process advances;</li>
+                                <li>To personalize your experience and present relevant offers;</li>
+                                <li>To communicate with you about your account, transactions, and updates;</li>
+                                <li>To detect, prevent, and address fraud, security incidents, and illegal activity;</li>
+                                <li>To comply with legal obligations and respond to lawful requests;</li>
+                                <li>To analyze usage patterns and improve our Services.</li>
+                            </ul>
+                            <p>
+                                We may aggregate or de-identify your information so that it cannot reasonably be used
+                                to identify you, and use such data for research, analytics, and product development.
+                            </p>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 4 -->
+                        <section id="sharing" class="legal-section">
+                            <h2><span class="legal-section-number">4</span>Sharing Your Information</h2>
+                            <p>
+                                We do not sell your personal information. We may share your information with the
+                                following categories of third parties:
+                            </p>
+                            <ul>
+                                <li><strong>Service Providers:</strong> Companies that perform services on our behalf, such as identity verification, payment processing, cloud hosting, and analytics;</li>
+                                <li><strong>Financial Institution Partners:</strong> Banks and licensed financial institutions that provide banking and EWA services;</li>
+                                <li><strong>Employer Partners:</strong> Your employer or payroll provider for the purpose of verifying income and facilitating wage access;</li>
+                                <li><strong>Offer Partners:</strong> Third-party partners whose offers and rewards are presented to you (only with your consent or as permitted by law);</li>
+                                <li><strong>Legal and Regulatory Authorities:</strong> When required by law, subpoena, court order, or to protect our rights and the safety of others;</li>
+                                <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets, subject to appropriate confidentiality protections.</li>
+                            </ul>
+                            <p>
+                                All third parties with whom we share information are contractually obligated to protect
+                                your data and use it only for the purposes for which it was shared.
+                            </p>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 5 -->
+                        <section id="bank-data" class="legal-section">
+                            <h2><span class="legal-section-number">5</span>Bank Data & Chirp Integration</h2>
+                            <p>
+                                Paiio uses Chirp Inc. ("Chirp") to securely connect your bank account and verify your
+                                income and transaction data. By using the Services, you agree to Chirp's privacy policy
+                                and terms of use.
+                            </p>
+                            <ul>
+                                <li>Chirp may collect and store your bank login credentials and account information;</li>
+                                <li>Chirp shares your account data with Paiio to calculate your available earned wages;</li>
+                                <li>We do not store your bank login credentials on our servers;</li>
+                                <li>You can revoke Chirp's access to your bank account at any time through the Chirp portal or by contacting support.</li>
+                            </ul>
+                            <div class="legal-callout">
+                                <p>
+                                    <strong>Important:</strong> Chirp's collection and use of your information is
+                                    governed by Chirp's own privacy policy, which we encourage you to review.
+                                </p>
+                            </div>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 6 -->
+                        <section id="cookies" class="legal-section">
+                            <h2><span class="legal-section-number">6</span>Cookies & Tracking Technologies</h2>
+                            <p>
+                                We use cookies, web beacons, and similar tracking technologies to enhance your
+                                experience, analyze usage, and deliver personalized content. You can control cookies
+                                through your browser settings, but disabling cookies may affect the functionality of
+                                the Services.
+                            </p>
+                            <ul>
+                                <li><strong>Essential Cookies:</strong> Required for the Services to function properly;</li>
+                                <li><strong>Analytics Cookies:</strong> Help us understand how users interact with the Services;</li>
+                                <li><strong>Marketing Cookies:</strong> Used to deliver relevant offers and measure their effectiveness.</li>
+                            </ul>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 7 -->
+                        <section id="security" class="legal-section">
+                            <h2><span class="legal-section-number">7</span>Data Security</h2>
+                            <p>
+                                We implement bank-level encryption (256-bit SSL/TLS), multi-factor authentication, and
+                                industry-standard security measures to protect your personal information. Access to
+                                your data is restricted to authorized personnel who need it to perform their duties.
+                            </p>
+                            <p>
+                                However, no method of transmission or storage is completely secure. While we strive to
+                                protect your information, we cannot guarantee absolute security. You are responsible
+                                for maintaining the confidentiality of your account credentials.
+                            </p>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 8 -->
+                        <section id="retention" class="legal-section">
+                            <h2><span class="legal-section-number">8</span>Data Retention</h2>
+                            <p>
+                                We retain your personal information for as long as necessary to provide the Services,
+                                comply with legal obligations, resolve disputes, and enforce our agreements. When your
+                                information is no longer needed, we will securely delete or anonymize it in accordance
+                                with applicable laws.
+                            </p>
+                            <ul>
+                                <li>Account information is retained for the duration of your account and for a reasonable period thereafter;</li>
+                                <li>Transaction records are retained as required by financial regulations;</li>
+                                <li>Usage data is retained in aggregated or de-identified form for analytics purposes.</li>
+                            </ul>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 9 -->
+                        <section id="your-rights" class="legal-section">
+                            <h2><span class="legal-section-number">9</span>Your Privacy Rights</h2>
+                            <p>
+                                Depending on your jurisdiction, you may have the following rights regarding your
+                                personal information:
+                            </p>
+                            <ul>
+                                <li><strong>Access:</strong> Request a copy of the personal information we hold about you;</li>
+                                <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information;</li>
+                                <li><strong>Deletion:</strong> Request deletion of your personal information, subject to legal retention requirements;</li>
+                                <li><strong>Opt-Out:</strong> Opt out of marketing communications and certain data sharing;</li>
+                                <li><strong>Portability:</strong> Request a machine-readable copy of your data;</li>
+                                <li><strong>Non-Discrimination:</strong> Exercise your rights without facing discriminatory treatment.</li>
+                            </ul>
+                            <p>
+                                To exercise any of these rights, please contact us at
+                                <a href="mailto:privacy@paiio.com" style="color: var(--primary-yellow); text-decoration: none;">privacy@paiio.com</a>.
+                                We will respond to your request within the timeframe required by applicable law.
+                            </p>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 10 -->
+                        <section id="children" class="legal-section">
+                            <h2><span class="legal-section-number">10</span>Children's Privacy</h2>
+                            <p>
+                                The Services are not intended for individuals under the age of 18. We do not knowingly
+                                collect personal information from children under 18. If we become aware that we have
+                                collected information from a child under 18, we will take steps to delete it promptly.
+                            </p>
+                            <p>
+                                If you believe that a child under 18 has provided us with personal information, please
+                                contact us at <a href="mailto:privacy@paiio.com" style="color: var(--primary-yellow); text-decoration: none;">privacy@paiio.com</a>.
+                            </p>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 11 -->
+                        <section id="third-party" class="legal-section">
+                            <h2><span class="legal-section-number">11</span>Third-Party Links</h2>
+                            <p>
+                                The Services may contain links to third-party websites, applications, or services that
+                                are not owned or controlled by Paiio. This Privacy Policy does not apply to those
+                                third-party services, and we are not responsible for their privacy practices.
+                            </p>
+                            <p>
+                                We encourage you to review the privacy policies of any third-party services you access
+                                through Paiio before providing them with your personal information.
+                            </p>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 12 -->
+                        <section id="changes-privacy" class="legal-section">
+                            <h2><span class="legal-section-number">12</span>Changes to This Policy</h2>
+                            <p>
+                                We may update this Privacy Policy from time to time to reflect changes in our
+                                practices, technology, or legal requirements. When we make material changes, we will
+                                notify you via email or through the app and update the "Last Updated" date at the top
+                                of this page.
+                            </p>
+                            <p>
+                                Your continued use of the Services after changes take effect constitutes acceptance of
+                                the revised Policy. If you do not agree to the updated Policy, you must stop using the
+                                Services and may close your account.
+                            </p>
+                        </section>
+
+                        <div class="legal-divider"></div>
+
+                        <!-- 13 -->
+                        <section id="contact-privacy" class="legal-section">
+                            <h2><span class="legal-section-number">13</span>Contact Us</h2>
+                            <p>
+                                If you have any questions, concerns, or requests regarding this Privacy Policy or our
+                                data practices, please contact us:
+                            </p>
+                            <div class="legal-callout">
+                                <p>
+                                    <strong>Paiio Inc.</strong><br>
+                                    Email: <a href="mailto:privacy@paiio.com" style="color: var(--primary-yellow); text-decoration: none;">privacy@paiio.com</a><br>
+                                    Support: <a href="mailto:support@paiio.com" style="color: var(--primary-yellow); text-decoration: none;">support@paiio.com</a><br>
+                                    Address: 123 Finance Street, New York, NY 10001
+                                </p>
+                            </div>
+                            <p class="mt-4" style="font-size: 0.85rem;">
+                                By using Paiio, you acknowledge that you have read, understood, and agree to the
+                                practices described in this Privacy Policy.
+                            </p>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+  
+    <!-- Modern Footer -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Brand Column -->
+                <div class="col-lg-4 col-md-6 footer-brand">
+                    <img src="assets/logo.png" alt="Paiio Logo">
+                    <p class="footer-desc">Paiio provides fast, secure, and transparent financial access, empowering you
+                        to manage your money on your own schedule.</p>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="./index.html#contact">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="./index.html#how-it-works">How it Works</a></li>
+                        <li><a href="./index.html#benefits">Benefits</a></li>
+                        <li><a href="./index.html#faq">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading">Legal & Compliance</h5>
+                    <ul class="footer-links">
+                        <li><a href="termsofuse.html">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                    <p class="mt-4 text-muted" style="font-size: 0.8rem; line-height: 1.5;">
+                        Paiio is a financial technology company, not a bank. Banking services are provided by our
+                        partner financial institutions.
+                    </p>
+                </div>
+            </div>
+
+<!-- Footer Bottom -->
+<div class="footer-bottom">
+    <div class="row align-items-center gy-4">
+        <!-- Left: Copyright -->
+        <div class="col-lg-6 text-center text-lg-start">
+            <p class="mb-0">&copy; 2026 Paiio Inc. All rights reserved.</p>
+        </div>
+
+        <!-- Center: Trust / Feature badges -->
+        <div class="col-lg-6 text-end">
+            <div class="footer-trust-strip">
+                <span class="trust-item"> Bank-Level Security</span>
+                <span class="trust-divider"></span>
+                <span class="trust-item"> Instant Access</span>
+                <span class="trust-divider"></span>
+                <span class="trust-item"> No Credit Impact</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Back To Top Button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <img src="assets/Vector.png" class="back-top-img">
+    </a>
+
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // --- Navbar shrink / shadow on scroll ---
+        const navbar = document.querySelector('.navbar');
+        const backToTop = document.getElementById('backToTop');
+
+        function handleScroll() {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+                navbar.style.padding = '5px 0';
+            } else {
+                navbar.style.boxShadow = 'none';
+                navbar.style.padding = '10px 0';
+            }
+
+            if (window.scrollY > 400) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+
+        // --- Back to top ---
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // --- Reveal on scroll ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(function (el) {
+            revealObserver.observe(el);
+        });
+
+        // --- TOC active link highlighting on scroll ---
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = document.querySelectorAll('.legal-section');
+
+        function updateActiveToc() {
+            let currentId = '';
+            const scrollPos = window.scrollY + 130;
+
+            sections.forEach(function (section) {
+                if (section.offsetTop <= scrollPos) {
+                    currentId = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(function (link) {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveToc, { passive: true });
+        updateActiveToc();
+
+        // --- Smooth scroll for TOC links ---
+        tocLinks.forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const offset = 100;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    history.pushState(null, '', targetId);
+                }
+            });
+        });
+
+        // --- Close mobile navbar on link click ---
+        const navCollapse = document.getElementById('navbarNav');
+        if (navCollapse) {
+            const bsCollapse = new bootstrap.Collapse(navCollapse, { toggle: false });
+            document.querySelectorAll('#navbarNav .nav-link, #navbarNav .btn').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth < 992 && navCollapse.classList.contains('show')) {
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        }
+    });
+</script>
+
+</body>
+
+</html>
